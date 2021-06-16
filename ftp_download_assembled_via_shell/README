@@ -1,0 +1,23 @@
+USE THIS SHELL CODE TO DOWNLOAD ASSEMBLED GENOMIC DATA FROM NCBI VIA FTP.
+
+- You will need a ftp_list file as input, giving the information of strains to fetch files from ncbi ftp:
+  1. Usually can get from https://www.ncbi.nlm.nih.gov/genome/browse/#!/overview/. 
+  2. Set some filters to get the assembled items of your interest, and download tsv file (including ftp information)
+  3. Open the tsv file in excel, copy the contents under the column called 'RefSeq FTP' (or perhaps 'GenBank FTP')
+  4. Paste soly ftp links into 'ftp_list' file, this tile would be the input of the shell script.
+
+- You should change TWO things before running the download_genome.sh:
+  1. The path of ftp_list.
+  2. The output file path you wanted.
+
+- To download different file types from ftp, here first look at this EXAMPLE: 
+  https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/001/027/105/GCF_001027105.1_ASM102710v1/
+  The only difference is the suffix of these files, so change the rynsc command if you wanna change the downloaded file type.
+  Here are information of some common file type information:
+      ` Genomic sequence:
+          - Genomic fasta file: '*[^from]_genomic.fna.gz'
+      ` Annotation, features & products:
+          - Genomic GenBank format: '*genomic.gbff.gz'
+          - CDS from genomic fasta (DNA format): '*cds_from_genomic.fna.gz'
+          - Translated CDS (aa format): '*translated_cds.faa.gz'
+          - Protein fasta (aa format, protein with complete annotation, usually less seqs than translated cds): '*protein.faa.gz'
