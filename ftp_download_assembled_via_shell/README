@@ -1,3 +1,4 @@
+#README
 USE THIS SHELL CODE TO DOWNLOAD ASSEMBLED GENOMIC DATA FROM NCBI VIA FTP.
 
 - You will need a ftp_list file as input, giving the information of strains to fetch files from ncbi ftp:
@@ -21,3 +22,6 @@ USE THIS SHELL CODE TO DOWNLOAD ASSEMBLED GENOMIC DATA FROM NCBI VIA FTP.
           - CDS from genomic fasta (DNA format): '*cds_from_genomic.fna.gz'
           - Translated CDS (aa format): '*translated_cds.faa.gz'
           - Protein fasta (aa format, protein with complete annotation, usually less seqs than translated cds): '*protein.faa.gz'
+ 
+ -EXAMPLE:
+ Take the 'download_genome.sh' as example, it downloads staphylococcus aureus genome fasta data hosted in human, as the ftp list is shown in the main file.
