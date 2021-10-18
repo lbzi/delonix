@@ -1,0 +1,3 @@
+This pipeline intend to extract gene of interest from a list of cds files and genome files, 
+and can extract upstream and downstream sequence with an input of interval. This pipeline is
+mainly used to check the alignment of 
